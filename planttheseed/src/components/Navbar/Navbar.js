@@ -8,7 +8,7 @@ import MenuItem from 'react-bootstrap/lib/MenuItem';
 const MyNavbar = () => (
 
 	<Navbar>
-		<Navbar.Header>
+		<Navbar.Header className="hey">
 			<Navbar.Brand>
 				<a href="#home">React-Bootstrap</a>
 			</Navbar.Brand>
