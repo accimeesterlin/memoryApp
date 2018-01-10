@@ -3,7 +3,7 @@ import './home-view.scss';
 export default props =>
 <div className='home'>
   <h1>
-    Welcome!
+    Welcome Jason!
   </h1>
   <div>
     This is an example homepage.
