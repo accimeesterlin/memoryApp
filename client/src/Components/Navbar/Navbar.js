@@ -4,30 +4,17 @@ import Nav from 'react-bootstrap/lib/Nav';
 import NavDropdown from 'react-bootstrap/lib/NavDropdown';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import MenuItem from 'react-bootstrap/lib/MenuItem';
-
+import MainButtons from '../Button'
 const MyNavbar = () => (
 
 	<Navbar>
-		<Navbar.Header className="hey">
+		<Navbar.Header className="header">
 			<Navbar.Brand>
-				<a href="#home">React-Bootstrap</a>
+				<a href="#home" img border="0" alt="leaflogo" src="../../../public/images/2x/leaf2.png" width="50" height="50">
+				</a>
 			</Navbar.Brand>
+			<MainButtons />
 		</Navbar.Header>
-		<Nav>
-			<NavItem eventKey={1} href="#">
-				Link
-			</NavItem>
-			<NavItem eventKey={2} href="#">
-				Link
-			</NavItem>
-			<NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-				<MenuItem eventKey={3.1}>Action</MenuItem>
-				<MenuItem eventKey={3.2}>Another action</MenuItem>
-				<MenuItem eventKey={3.3}>Something else here</MenuItem>
-				<MenuItem divider />
-				<MenuItem eventKey={3.4}>Separated link</MenuItem>
-			</NavDropdown>
-		</Nav>
 	</Navbar>
 );
 
