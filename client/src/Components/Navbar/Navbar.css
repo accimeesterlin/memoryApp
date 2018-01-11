@@ -1,0 +1,20 @@
+.btn-sign-up {
+    color: rgb(255, 255, 255);
+    /* border: 2px solid rgb(255, 255, 255); */
+    border-radius: 25px;
+    background-color: rgb(42, 233, 42);
+    vertical-align: center;
+    
+}
+.btn-sign-in {
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 25px;
+    background-color: rgba(255, 0, 0, 0);
+    
+}
+
+.header {
+    background: rgba(0, 0, 0, 0.42);
+    height: 80px;
+}

@@ -5,16 +5,34 @@ import NavDropdown from 'react-bootstrap/lib/NavDropdown';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import MenuItem from 'react-bootstrap/lib/MenuItem';
 import MainButtons from '../Button'
+import ButtonToolbar from 'react-bootstrap/lib/ButtonToolbar';
+import './Navbar.css';
+import LeafLogo from './images/leaf2.png'
 const MyNavbar = () => (
 
-	<Navbar>
-		<Navbar.Header className="header">
-			<Navbar.Brand>
-				<a href="#home" img border="0" alt="leaflogo" src="../../../public/images/2x/leaf2.png" width="50" height="50">
-				</a>
+	<Navbar className="header">
+		<Navbar.Header >
+			<Navbar.Brand >
+				<div>
+					<img img border="2" alt="leaflogo" src= { LeafLogo } width="75" height="50">
+					</img>
+				</div>
 			</Navbar.Brand>
-			<MainButtons />
+			{/* <ButtonToolbar class="main-btns" pullRight>
+				
+				<button bsSize="large" className="btn sign-in">SIGN UP</button>
+				<button bsSize="large" className="btn sign-in">SIGN IN</button>
+				
+			</ButtonToolbar> */}
 		</Navbar.Header>
+			<Nav pullRight>
+				<NavItem eventKey={1} href="#">
+				<button className="btn btn-large btn-sign-up ">SIGN UP</button>
+				</NavItem>
+				<NavItem eventKey={2} href="#">
+				<button className="btn btn-large btn-sign-in">SIGN IN</button>
+				</NavItem>
+			</Nav>
 	</Navbar>
 );
 
