@@ -11,12 +11,12 @@ export default props =>
   <div className="navbar">
     <MyNavbar />
    
-    <ul>
+    {/* <ul>
       <button><Link to="/">Home</Link></button>
       <button><Link to="/organization">Organizations</Link></button>
     </ul>
 
-    <hr/>
+    <hr/> */}
 
     <Route exact path="/" component={Home}/>
     <Route path="/organization" component={Organization}/>

@@ -1,4 +1,4 @@
-import MainButtons from './button';
+import ActionButton from './button';
 export {
-  MainButtons as default
+  ActionButton as default
 };

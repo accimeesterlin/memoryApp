@@ -14,16 +14,10 @@ const MyNavbar = () => (
 		<Navbar.Header >
 			<Navbar.Brand >
 				<div>
-					<img img border="2" alt="leaflogo" src= { LeafLogo } width="75" height="50">
+					<img responsive img border="2" alt="leaflogo" src= { LeafLogo } width="75" height="50">
 					</img>
 				</div>
 			</Navbar.Brand>
-			{/* <ButtonToolbar class="main-btns" pullRight>
-				
-				<button bsSize="large" className="btn sign-in">SIGN UP</button>
-				<button bsSize="large" className="btn sign-in">SIGN IN</button>
-				
-			</ButtonToolbar> */}
 		</Navbar.Header>
 			<Nav pullRight>
 				<NavItem eventKey={1} href="#">
