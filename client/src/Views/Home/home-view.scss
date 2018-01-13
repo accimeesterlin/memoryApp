@@ -1,12 +1,29 @@
 .home {
+  div {
+    padding: none;
+  }
   
-  height: 800px;
-  border: red 1px solid;
-   
-    
   h1 {
-    color: rgb(255, 255, 255);
+    color: rgb(82, 178, 213);
   }
 }
+.section1 {
+  height: 800px;
+   
+  
+ }
+.section2 {
+  height: 800px;
+   background-color: orange;
+   margin-top:0!important; 
+ }
+.section3 {
+  height: 800px;
+   background-color: rgb(61, 218, 53);
+   margin-top:0!important; 
+ }
 
 
+.modal-container .modal .modal-container .modal-backdrop {
+  position: absolute;
+}

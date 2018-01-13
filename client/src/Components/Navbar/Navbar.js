@@ -8,7 +8,9 @@ import MainButtons from '../Button'
 import ButtonToolbar from 'react-bootstrap/lib/ButtonToolbar';
 import './Navbar.css';
 import LeafLogo from './images/leaf2.png'
-const MyNavbar = () => (
+
+
+const MyNavbar = (props) => (
 
 	<Navbar className="header">
 		<Navbar.Header >
@@ -19,6 +21,9 @@ const MyNavbar = () => (
 				</div>
 			</Navbar.Brand>
 		</Navbar.Header>
+		
+		
+		{!props.isLoggedIn ? (
 			<Nav pullRight>
 				<NavItem eventKey={1} href="#">
 				<button className="btn btn-large btn-sign-up ">SIGN UP</button>
@@ -27,6 +32,20 @@ const MyNavbar = () => (
 				<button className="btn btn-large btn-sign-in">SIGN IN</button>
 				</NavItem>
 			</Nav>
+       
+      ) : (
+		<Nav pullRight>
+		<NavItem eventKey={1} href="#">
+		<button className="btn btn-large btn-sign-up ">CREATE NEW SEED</button>
+		</NavItem>
+		<NavItem eventKey={2} href="#">
+		<button className="btn btn-large btn-sign-in">LOG OUT</button>
+		</NavItem>
+	</Nav>
+        
+	  )}
+	  
+
 	</Navbar>
 );
 

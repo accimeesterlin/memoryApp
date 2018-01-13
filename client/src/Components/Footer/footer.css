@@ -1,6 +1,18 @@
+
 .footer {
-    background: rgba(227, 25, 25, 0.42);
-    height: 1800px;
+    background: rgba(0, 0, 0, 0.29);    
+    height: 80px;
     z-index : 1;
     border: none;
+    position: absolute; 
+    left: 0 ; right: 0; bottom: 0; 
+    width: 100%;
 }
+
+.info-text { 
+    display: inline-block;
+    align-items: center;
+    color: white;
+    padding: 30px;
+}
+
