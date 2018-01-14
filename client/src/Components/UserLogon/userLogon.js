@@ -1,26 +1,26 @@
 import React from "react";
-import './plantButton.scss';
+import './userLogon.scss';
 import Modal from 'react-bootstrap/lib/Modal'
 import ButtonToolbar from 'react-bootstrap/lib/ButtonToolbar';
 import Button from 'react-bootstrap/lib/Button';
 import FormControl from 'react-bootstrap/lib/FormControl';
 import FormGroup from 'react-bootstrap/lib/FormGroup';
 import Form from 'react-bootstrap/lib/Form';
+import PlantASeedButton from '../PlantASeedButton'
 
-
-const formInstance = (
+const userLogon = (
 	<form>
 		<FormGroup bsSize="large">
-			<FormControl className="soil" type="text" placeholder="ex: Where you met, what purpose, which language, etc..." />
+			<FormControl className="soil" type="text" placeholder="User Name" />
 		</FormGroup>
-        <FormGroup bsSize="large">
-			<FormControl className="seed" type="text" placeholder="ex: Name, number, etc. Make it short and understandable, you will be tested on this." />
+		<FormGroup bsSize="large">
+			<FormControl className="seed" type="password" placeholder="Password" />
 		</FormGroup>
 	</form>
 );
 
 
-class PlantButton extends React.Component {
+class UserLogon extends React.Component {
 	constructor(...args) {
 		super(...args);
 
@@ -40,7 +40,7 @@ class PlantButton extends React.Component {
 					bsSize="large"
 					onClick={() => this.setState({ show: true })}
 				>
-					PLANT A SEED!
+					SIGN UP or SIGN IN
 				</Button>
 
 				<Modal
@@ -51,24 +51,24 @@ class PlantButton extends React.Component {
 				>
 					<Modal.Header closeButton>
 						<Modal.Title id="contained-modal-title">
-							<h1>Let's Plant a Seed!</h1>
+							<h1>Sign Up or Sign In to start planting!</h1>
 						</Modal.Title>
 					</Modal.Header>
 					<Modal.Body>
-						<h3>Simply enter a bit of reference info
-                        (the Soil) and the thing you want to
-                        remember (the Seed)…
-                        Then watch it grow.</h3>
-                    {formInstance}
+						<h3>Create an account by entering a user name and password. That's it!
+							...or Sign in using your existing account info.
+							Have fun!</h3>
+							{userLogon}
 					</Modal.Body>
-					<Modal.Footer >
-						<Button class="plant-btn" onClick={this.handleHide}>Plant it!</Button>
-					</Modal.Footer>
+							<Modal.Footer >
+								{/* <Button class="plant-btn" onClick={this.handleHide}>Start Planting!</Button> */}
+								<PlantASeedButton class="plant-btn" onClick={this.handleHide}>Start Planting!</PlantASeedButton>
+							</Modal.Footer>
 				</Modal>
 			</div>
-		);
+					);
 	}
 }
 
 
-export default PlantButton;
+export default UserLogon;

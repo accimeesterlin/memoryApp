@@ -2,23 +2,34 @@
   div {
     padding: none;
   }
-  
   h1 {
-    color: rgb(82, 178, 213);
+    color: rgb(250, 252, 252); 
+  }
+  h3{
+    color: orange;
+  }
+  h4 {
+    color: white;
+  }
+  img {
+    position: relative;
   }
 }
+.glyph {
+  color: white;
+}
 .section1 {
-  height: 800px;
-   
-  
- }
+  text-align: center;
+  height: 650px;
+  // background-color: darkolivegreen; 
+}
 .section2 {
-  height: 800px;
+  height: 750px;
    background-color: orange;
    margin-top:0!important; 
  }
 .section3 {
-  height: 800px;
+  height: 750px;
    background-color: rgb(61, 218, 53);
    margin-top:0!important; 
  }
