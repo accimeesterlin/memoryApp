@@ -4,30 +4,29 @@ import Nav from 'react-bootstrap/lib/Nav';
 import NavDropdown from 'react-bootstrap/lib/NavDropdown';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import MenuItem from 'react-bootstrap/lib/MenuItem';
-
+import MainButtons from '../Button'
+import ButtonToolbar from 'react-bootstrap/lib/ButtonToolbar';
+import './Navbar.css';
+import LeafLogo from './images/leaf2.png'
 const MyNavbar = () => (
 
-	<Navbar>
-		<Navbar.Header className="hey">
-			<Navbar.Brand>
-				<a href="#home">React-Bootstrap</a>
+	<Navbar className="header">
+		<Navbar.Header >
+			<Navbar.Brand >
+				<div>
+					<img responsive img border="2" alt="leaflogo" src= { LeafLogo } width="75" height="50">
+					</img>
+				</div>
 			</Navbar.Brand>
 		</Navbar.Header>
-		<Nav>
-			<NavItem eventKey={1} href="#">
-				Link
-			</NavItem>
-			<NavItem eventKey={2} href="#">
-				Link
-			</NavItem>
-			<NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-				<MenuItem eventKey={3.1}>Action</MenuItem>
-				<MenuItem eventKey={3.2}>Another action</MenuItem>
-				<MenuItem eventKey={3.3}>Something else here</MenuItem>
-				<MenuItem divider />
-				<MenuItem eventKey={3.4}>Separated link</MenuItem>
-			</NavDropdown>
-		</Nav>
+			<Nav pullRight>
+				<NavItem eventKey={1} href="#">
+				<button className="btn btn-large btn-sign-up ">SIGN UP</button>
+				</NavItem>
+				<NavItem eventKey={2} href="#">
+				<button className="btn btn-large btn-sign-in">SIGN IN</button>
+				</NavItem>
+			</Nav>
 	</Navbar>
 );
 
