@@ -6,7 +6,7 @@
     color: rgb(250, 252, 252); 
   }
   h3{
-    color: orange;
+    color: rgb(111, 75, 13);
   }
   h4 {
     color: white;
@@ -20,6 +20,7 @@
 }
 .glyph {
   color: white;
+  text-align: center;
 }
 .section1 {
   text-align: center;
@@ -27,9 +28,15 @@
   // background-color: darkolivegreen; 
 }
 .section2 {
-  height: 750px;
+  height: 700px;
    background-color: orange;
    margin-top:0!important; 
+   
+   h4, h2, {
+
+     text-align: center;
+   }
+   
  }
 .section3 {
   height: 750px;
@@ -40,4 +47,35 @@
 
 .modal-container .modal .modal-container .modal-backdrop {
   position: absolute;
+}
+.ligthbulb,.flower {
+  z-index: 3;
+}
+.flower{
+  padding-top: 400px;
+  padding-left: 50px;
+}
+.step-list {
+  color: rgb(255, 255, 255);
+  font-family: 'Patrick Hand', cursive;
+  font-size: 20px;
+  line-height: 32px;
+  
+  
+}
+.easy-text {
+  padding-bottom: 35px;
+  font-family: 'Sanchez', serif;
+  color: rgb(97, 78, 45);
+  font-size: 90px;
+}
+
+.lg-nums {
+  font-family: 'Sanchez', serif;
+  color: rgb(97, 78, 45);
+  font-size: 90px;
+  
+}
+.sec3-tagline{
+  
 }

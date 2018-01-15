@@ -16,11 +16,13 @@ import { Image } from 'react-bootstrap';
 import { Glyphicon } from 'react-bootstrap';
 import RedDress from './images/NewRedDressCrop.png'
 import LightBulb from './images/LightBulbCrop.png'
+import Flower from './images/flower.png'
 
 //image for main logo
 const imageResponsiveInstance = <Image src={MainLogo} responsive />;
 const RedDressResponsive = <Image src={RedDress} responsive />;
 const LightBulbResponsive = <Image src={LightBulb} responsive />;
+const FlowerResponsive = <Image src={Flower} responsive />;
 
 //for button state change
 const isLoggedIn = false;
@@ -46,14 +48,17 @@ export default props =>
         </Row>
       </Grid>
     </div>
+
+    {/* section 2 */}
+
     <div className='home section2'>
       <Grid >
         <Row className="logo-row">
           <Col xs={12} md={6}>
             {RedDressResponsive}
           </Col>
-          <Col className="logo" xs={12} md={6}>
-            <ul className="questions">
+          <Col className="questions" xs={12} md={6}>
+            <ul>
               <li>Are you often unable to remember
 an important fact or figure?</li>
               <li>Do you forget people’s names at
@@ -67,44 +72,89 @@ intelligent reply?</li>
           </Col>
         </Row>
         <Row>
-          <h4 >LEARN MORE</h4>
+          <h2 >Now you can easily commit these ‘seeds’
+to long term memory using proven methods.</h2>
+        </Row>
+        <Row>
+          <h4>LEARN MORE</h4>
           <Glyphicon className="glyph" glyph="glyphicon glyphicon-menu-down" />
         </Row>
       </Grid>
     </div>
 
+    {/* section 3 */}
+
     <div className='home section3'>
+
+      <Row >
+        <Col xs={1} md={1}>
+        </Col>
+        <Col className="sec3-tagline" xs={10} md={10}>
+          <h3 className="easy-text" >It’s as easy as …</h3>
+        </Col>
+        <Col xs={1} md={1}>
+        </Col>
+      </Row>
+
       <Grid >
-        <Row className="logo-row">
-          <Col xs={12} md={2}>
-            {/* flower image */}
+        <Row className="step-col">
+          <Col className="flower" xs={12} md={2}>
+            {FlowerResponsive}
           </Col>
-          <Col className="logo" xs={12} md={5}>
-            {/* 1.2.3. steps */}
+
+          <Col className="steps" xs={12} md={5}>
+            <Row className="row-1">
+              <Col className="lg-nums" md={2}>
+                1.
+              </Col>
+              <Col className="step-list" md={10}>
+
+                Input what you want to learn as the ‘seed’, and a reminder item that helps you learn it, as the ‘soil’.
+
+              </Col>
+            </Row>
+            <Row className="row-2">
+              <Col className="lg-nums" md={2}>
+                2.
+              </Col>
+              <Col className="step-list" md={10}>
+
+                Periodic prompts will pop up to help you grow your ‘seed’. This will plant it into your memory with repitition.
+              </Col>
+            </Row>
+            <Row className="row-3">
+              <Col className="lg-nums" md={2}>
+                3.
+              </Col>
+              <Col className="step-list" md={10}>
+
+                On your final prompt, your ‘seed’ will fully blossom by committing it to memory by using a proven retention technique.
+              </Col>
+            </Row>
           </Col>
-          <Col xs={12} md={5}>
+
+          <Col className="ligthbulb" xs={12} md={5}>
             {LightBulbResponsive}
             {/* lightbulb guy image */}
           </Col>
         </Row>
 
-        <Row>
-          <Col xs={12} md={2}>
-          </Col>
-            <Col xs={12} md={8}>
-              <UserLogon />
-              <PlantButton />
-            </Col>
-              <Col xs={12} md={2}>
-              </Col>
-          </Row>
-         
-          
-              {/* <Row className="ground">
+        {/* <Row className="ground">
               </Row> */}
-            <Footer />
       </Grid>
+      {/* <Row className="ground">
+                <Col xs={12} md={2}>
+                  {<UserLogon />}
+                </Col>
+                <Col xs={12} md={8}>
+                  {<PlantButton />}
+                </Col>
+                <Col xs={12} md={2}>
+                  <UserLogon />
+                </Col>
+              </Row> */}
+      <Footer />
     </div>
-    </div>
+  </div>
 
 
