@@ -14,9 +14,13 @@ import { Col } from 'react-bootstrap';
 import MainLogo from './images/logo.png'
 import { Image } from 'react-bootstrap';
 import { Glyphicon } from 'react-bootstrap';
+import RedDress from './images/NewRedDressCrop.png'
+import LightBulb from './images/LightBulbCrop.png'
 
 //image for main logo
 const imageResponsiveInstance = <Image src={MainLogo} responsive />;
+const RedDressResponsive = <Image src={RedDress} responsive />;
+const LightBulbResponsive = <Image src={LightBulb} responsive />;
 
 //for button state change
 const isLoggedIn = false;
@@ -37,7 +41,7 @@ export default props =>
           </Col>
         </Row>
         <Row>
-          <h4 >LEARN MORE</h4>
+          <h4>LEARN MORE</h4>
           <Glyphicon className="glyph" glyph="glyphicon glyphicon-menu-down" />
         </Row>
       </Grid>
@@ -46,9 +50,20 @@ export default props =>
       <Grid >
         <Row className="logo-row">
           <Col xs={12} md={6}>
+            {RedDressResponsive}
           </Col>
           <Col className="logo" xs={12} md={6}>
-            {imageResponsiveInstance}
+            <ul className="questions">
+              <li>Are you often unable to remember
+an important fact or figure?</li>
+              <li>Do you forget people’s names at
+the worst moments?</li>
+              <li>Are you ever asked a question,
+and you should know the answer,
+but you struggle to form an
+intelligent reply?</li>
+
+            </ul>
           </Col>
         </Row>
         <Row>
@@ -68,16 +83,28 @@ export default props =>
             {/* 1.2.3. steps */}
           </Col>
           <Col xs={12} md={5}>
+            {LightBulbResponsive}
             {/* lightbulb guy image */}
           </Col>
         </Row>
-        <Row className="ground">
-        <UserLogon />
-<PlantButton />
-        </Row>
+
+        <Row>
+          <Col xs={12} md={2}>
+          </Col>
+            <Col xs={12} md={8}>
+              <UserLogon />
+              <PlantButton />
+            </Col>
+              <Col xs={12} md={2}>
+              </Col>
+          </Row>
+         
+          
+              {/* <Row className="ground">
+              </Row> */}
+            <Footer />
       </Grid>
-    <Footer />
     </div>
     </div>
-    
+
 

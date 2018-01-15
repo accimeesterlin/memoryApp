@@ -11,10 +11,10 @@ import PlantASeedButton from '../PlantASeedButton'
 const userLogon = (
 	<form>
 		<FormGroup bsSize="large">
-			<FormControl className="soil" type="text" placeholder="User Name" />
+			<FormControl className="soil" name="soil" type="text" placeholder="User Name" />
 		</FormGroup>
 		<FormGroup bsSize="large">
-			<FormControl className="seed" type="password" placeholder="Password" />
+			<FormControl className="seed" name="seed" type="password" placeholder="Password" />
 		</FormGroup>
 	</form>
 );
