@@ -4,23 +4,31 @@ import Home from './Home';
 import Organization from './Organization'
 import MainButtons from '../Components/Button'
 import MyNavbar from '../Components/Navbar'
+import Notifications from '../Components/Notifications'
 
 import './app.scss'
-export default props =>
-<BrowserRouter>
-  <div className="navbar">
-    <MyNavbar />
-   
-    {/* <ul>
+export default props => (
+  <div>
+    <Notifications />
+    <BrowserRouter>
+      <div className="navbar">
+
+        <MyNavbar />
+
+        {/* <ul>
       <button><Link to="/">Home</Link></button>
       <button><Link to="/organization">Organizations</Link></button>
     </ul>
 
     <hr/> */}
 
-    <Route exact path="/" component={Home}/>
-    <Route path="/organization" component={Organization}/>
+        <Route exact path="/" component={Home} />
+        <Route path="/organization" component={Organization} />
+
+      </div>
+    </BrowserRouter>
   </div>
-</BrowserRouter>
+)
+
 
 
