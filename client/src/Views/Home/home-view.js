@@ -58,22 +58,29 @@ export default props =>
             {RedDressResponsive}
           </Col>
           <Col className="questions" xs={12} md={6}>
-            <ul>
-              <li>Are you often unable to remember
-an important fact or figure?</li>
-              <li>Do you forget people’s names at
-the worst moments?</li>
-              <li>Are you ever asked a question,
+            
+            <ul className="list">
+              <li><h2>Are you often unable to remember
+an important fact or figure?</h2></li>
+              <li><h2>Do you forget people’s names at
+the worst moments?</h2></li>
+              <li><h2>Are you ever asked a question,
 and you should know the answer,
 but you struggle to form an
-intelligent reply?</li>
+intelligent reply?</h2></li>
 
             </ul>
           </Col>
         </Row>
         <Row>
-          <h2 >Now you can easily commit these ‘seeds’
+          <Col md={2}>
+          </Col>
+          <Col md={8}>
+          <h2 className="commit" >Now you can easily commit these ‘seeds’
 to long term memory using proven methods.</h2>
+          </Col>
+          <Col md={2}>
+          </Col>
         </Row>
         <Row>
           <h4>LEARN MORE</h4>
@@ -109,7 +116,7 @@ to long term memory using proven methods.</h2>
               </Col>
               <Col className="step-list" md={10}>
 
-                Input what you want to learn as the ‘seed’, and a reminder item that helps you learn it, as the ‘soil’.
+                <h2>Input what you want to learn as the ‘seed’, and a reminder item that helps you learn it, as the ‘soil’.</h2>
 
               </Col>
             </Row>
@@ -119,7 +126,7 @@ to long term memory using proven methods.</h2>
               </Col>
               <Col className="step-list" md={10}>
 
-                Periodic prompts will pop up to help you grow your ‘seed’. This will plant it into your memory with repitition.
+                <h2>Periodic prompts will pop up to help you grow your ‘seed’. This will plant it into your memory with <u>repitition</u>.</h2>
               </Col>
             </Row>
             <Row className="row-3">
@@ -128,12 +135,13 @@ to long term memory using proven methods.</h2>
               </Col>
               <Col className="step-list" md={10}>
 
-                On your final prompt, your ‘seed’ will fully blossom by committing it to memory by using a proven retention technique.
+                <h2>On your final prompt, your ‘seed’ will fully blossom, committing it to memory using a proven <u>retention</u> technique.</h2>
+              <UserLogon />
               </Col>
             </Row>
           </Col>
 
-          <Col className="ligthbulb" xs={12} md={5}>
+          <Col className="lightbulb" xs={12} md={5}>
             {LightBulbResponsive}
             {/* lightbulb guy image */}
           </Col>

@@ -11,9 +11,7 @@
   h4 {
     color: white;
   }
-  img {
-    position: relative;
-  }
+  
   ul {
     color: white;
   }
@@ -23,45 +21,40 @@
   text-align: center;
 }
 .section1 {
+  
+  margin-top:0!important; 
   text-align: center;
-  height: 650px;
-  // background-color: darkolivegreen; 
+  height: 710px;
 }
 .section2 {
-  height: 700px;
+   height: 750px;
    background-color: orange;
    margin-top:0!important; 
-   
-   h4, h2, {
+   text-align: center; 
+   padding-top: 40px;
 
-     text-align: center;
-   }
-   
- }
+}
 .section3 {
-  height: 750px;
+  height: 920px;
    background-color: rgb(61, 218, 53);
    margin-top:0!important; 
- }
-
-
+}
 .modal-container .modal .modal-container .modal-backdrop {
   position: absolute;
 }
-.ligthbulb,.flower {
-  z-index: 3;
+.lightbulb {
+  z-index: 3;  
 }
 .flower{
+  z-index: 3;
   padding-top: 400px;
   padding-left: 50px;
 }
 .step-list {
   color: rgb(255, 255, 255);
   font-family: 'Patrick Hand', cursive;
-  font-size: 20px;
-  line-height: 32px;
-  
-  
+  // font-size: 16px;
+  // line-height: 20px;  
 }
 .easy-text {
   padding-bottom: 35px;
@@ -69,13 +62,23 @@
   color: rgb(97, 78, 45);
   font-size: 90px;
 }
-
 .lg-nums {
   font-family: 'Sanchez', serif;
   color: rgb(97, 78, 45);
-  font-size: 90px;
-  
+  font-size: 80px;  
 }
 .sec3-tagline{
   
+}
+.questions {
+  padding-top: 50px;
+  text-align: left;
+
+}
+.commit {
+  font-family: 'Sanchez', serif;
+  color: rgb(97, 78, 45);
+}
+.list {
+  padding-top: 30px;
 }

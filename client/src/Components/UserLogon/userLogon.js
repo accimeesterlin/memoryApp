@@ -40,7 +40,7 @@ class UserLogon extends React.Component {
 					bsSize="large"
 					onClick={() => this.setState({ show: true })}
 				>
-					SIGN UP or SIGN IN
+					GET STARTED!
 				</Button>
 
 				<Modal
@@ -58,15 +58,15 @@ class UserLogon extends React.Component {
 						<h3>Create an account by entering a user name and password. That's it!
 							...or Sign in using your existing account info.
 							Have fun!</h3>
-							{userLogon}
+						{userLogon}
 					</Modal.Body>
-							<Modal.Footer >
-								{/* <Button class="plant-btn" onClick={this.handleHide}>Start Planting!</Button> */}
-								<PlantASeedButton class="plant-btn" onClick={this.handleHide}>Start Planting!</PlantASeedButton>
-							</Modal.Footer>
+					<Modal.Footer >
+						{/* <Button class="plant-btn" onClick={this.handleHide}>Start Planting!</Button> */}
+						<PlantASeedButton class="plant-btn" onClick={this.handleHide}>Start Planting!</PlantASeedButton>
+					</Modal.Footer>
 				</Modal>
 			</div>
-					);
+		);
 	}
 }
 
