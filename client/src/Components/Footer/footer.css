@@ -1,0 +1,6 @@
+.footer {
+    background: rgba(227, 25, 25, 0.42);
+    height: 1800px;
+    z-index : 1;
+    border: none;
+}
