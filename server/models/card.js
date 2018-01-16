@@ -14,10 +14,10 @@ module.exports = function(sequelize, DataTypes) {
         len: [1, 150]
       }
     },
-    userId: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
+    // userId: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false
+    // },
     active: {
       type: DataTypes.BOOLEAN,
       defaultValue: true
@@ -28,8 +28,18 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     lastShown: {
-      type: DataTypes.timestamp
+      type: DataTypes.DATE
     }
   });
+  Card.associate = function(models) {
+    // We're saying that a Card should belong to an User
+    // A Card can't be created without a User due to the foreign key constraint
+    Card.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
   return Card;
 };
