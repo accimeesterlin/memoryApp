@@ -1,9 +1,31 @@
-body {
+ body{
     background-color: #3B2F1A;
-    /* background-color: #FFCE60; */
+}
+h1{
+    font-family: 'Patrick Hand', cursive;
+}
+h4 {
+    font-family: 'Patrick Hand', cursive;
+}
+h3{
+    font-family: 'Sanchez', serif;
+}
+ul {
+    font-family: 'Patrick Hand', cursive;
 }
 
-footer {
+#root {
+    
+}
+/* font-family: 'Itim', cursive;
+font-family: 'Delius', cursive;
+font-family: 'Patrick Hand', cursive; 
+font-family: 'Sanchez', serif;
+
+*/
+
+
+/* footer {
     background: rgba(0, 0, 0, 0.29);
     height: 180px;
     z-index : -1;
@@ -11,5 +33,5 @@ footer {
     text-align: center;
     color: white;
     line-height: auto;
-}
+} */
 
