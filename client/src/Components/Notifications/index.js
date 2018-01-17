@@ -1,6 +1,6 @@
 import { subscribeToTimer } from './socket';
 import React, { Component } from 'react';
-
+import './socket.css';
 
 class Notifications extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class Notifications extends Component {
   render() {
     return (
       <div className="App">
-        <p className="App-intro">
+        <p className="App-intro white">
           This is the timer value: {this.state.timestamp}
         </p>
       </div>
