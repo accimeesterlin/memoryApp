@@ -8,6 +8,8 @@ import FormGroup from 'react-bootstrap/lib/FormGroup';
 import Form from 'react-bootstrap/lib/Form';
 import PlantASeedButton from '../PlantASeedButton'
 
+
+
 const userLogon = (
 	<form>
 		<FormGroup bsSize="large">
