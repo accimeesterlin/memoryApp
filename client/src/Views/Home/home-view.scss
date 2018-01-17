@@ -1,12 +1,84 @@
 .home {
-  
-  height: 800px;
-  border: red 1px solid;
-   
-    
+  div {
+    padding: none;
+  }
   h1 {
-    color: rgb(255, 255, 255);
+    color: rgb(250, 252, 252); 
+  }
+  h3{
+    color: rgb(111, 75, 13);
+  }
+  h4 {
+    color: white;
+  }
+  
+  ul {
+    color: white;
   }
 }
+.glyph {
+  color: white;
+  text-align: center;
+}
+.section1 {
+  
+  margin-top:0!important; 
+  text-align: center;
+  height: 710px;
+}
+.section2 {
+   height: 750px;
+   background-color: orange;
+   margin-top:0!important; 
+   text-align: center; 
+   padding-top: 40px;
 
+}
+.section3 {
+  height: 920px;
+   background-color: rgb(61, 218, 53);
+   margin-top:0!important; 
+}
+.modal-container .modal .modal-container .modal-backdrop {
+  position: absolute;
+}
+.lightbulb {
+  z-index: 3;  
+}
+.flower{
+  z-index: 3;
+  padding-top: 400px;
+  padding-left: 50px;
+}
+.step-list {
+  color: rgb(255, 255, 255);
+  font-family: 'Patrick Hand', cursive;
+  // font-size: 16px;
+  // line-height: 20px;  
+}
+.easy-text {
+  padding-bottom: 35px;
+  font-family: 'Sanchez', serif;
+  color: rgb(97, 78, 45);
+  font-size: 90px;
+}
+.lg-nums {
+  font-family: 'Sanchez', serif;
+  color: rgb(97, 78, 45);
+  font-size: 80px;  
+}
+.sec3-tagline{
+  
+}
+.questions {
+  padding-top: 50px;
+  text-align: left;
 
+}
+.commit {
+  font-family: 'Sanchez', serif;
+  color: rgb(97, 78, 45);
+}
+.list {
+  padding-top: 30px;
+}

@@ -13,18 +13,8 @@ export default props => (
     <BrowserRouter>
       <div className="navbar">
 
-        <MyNavbar />
-
-        {/* <ul>
-      <button><Link to="/">Home</Link></button>
-      <button><Link to="/organization">Organizations</Link></button>
-    </ul>
-
-    <hr/> */}
-
         <Route exact path="/" component={Home} />
         <Route path="/organization" component={Organization} />
-
       </div>
     </BrowserRouter>
   </div>
