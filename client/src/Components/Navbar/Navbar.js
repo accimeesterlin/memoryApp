@@ -18,7 +18,7 @@ const MyNavbar = (props) => (
 		<Navbar.Header  >
 			<Navbar.Brand  >
 				<div >
-					<img responsive img border="2" alt="leaflogo" src={LeafLogo} width="75" height="50">
+					<img responsive="true" border="2" alt="leaflogo" src={LeafLogo} width="75" height="50">
 					</img>
 				</div>
 			</Navbar.Brand>
@@ -26,15 +26,9 @@ const MyNavbar = (props) => (
 
 		{!props.isLoggedIn ? (
 			<Nav pullRight >
-				<div>
-				<UserLogon />	
-				</div>
-				{/* <NavItem eventKey={1} href="#">				
+				<NavItem eventKey={1} href="#">				
 						<UserLogon />				
-				</NavItem> */}
-				{/* <NavItem eventKey={2} href="#">
-					<button className="btn btn-large btn-sign-in">SIGN IN</button>
-				</NavItem> */}
+				</NavItem>
 			</Nav>
 
 		) : (

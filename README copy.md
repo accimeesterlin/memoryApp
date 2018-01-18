@@ -8,7 +8,7 @@ DB_USERNAME=root
 DB_PASSWORD=ChangeMe123
 DB_SCHEMA=example_db
 DB_DIALECT=mysql
-```
+``` 
 * run schema.sql simply to create the schema in mysql workbench/command line.  Sequelize will take care of creating tables based on models created in server/models folder.
 * run ```yarn watch``` or ```npm run watch``` for instant update of client/server on changes and use localhost:3000 for any frontend work and localhost:3001 for any backend work.
 * run ```yarn dev``` or ```npm run dev``` to build and run the built files locally.  Use localhost:3001 for both frontend and backend.  This is more similar to what would be deployed on prod.
