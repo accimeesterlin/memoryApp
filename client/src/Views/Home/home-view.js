@@ -58,7 +58,7 @@ export default props =>
             {RedDressResponsive}
           </Col>
           <Col className="questions" xs={12} md={6}>
-            
+
             <ul className="list">
               <li><h2>Are you often unable to remember
 an important fact or figure?</h2></li>
@@ -76,15 +76,11 @@ intelligent reply?</h2></li>
           <Col md={2}>
           </Col>
           <Col md={8}>
-          <h2 className="commit" >Now you can easily commit these ‘seeds’
+            <h2 className="commit" >Now you can easily commit these ‘seeds’
 to long term memory using proven methods.</h2>
           </Col>
           <Col md={2}>
           </Col>
-        </Row>
-        <Row>
-          <h4>LEARN MORE</h4>
-          <Glyphicon className="glyph" glyph="glyphicon glyphicon-menu-down" />
         </Row>
       </Grid>
     </div>
@@ -92,7 +88,6 @@ to long term memory using proven methods.</h2>
     {/* section 3 */}
 
     <div className='home section3'>
-
       <Row >
         <Col xs={1} md={1}>
         </Col>
@@ -136,8 +131,8 @@ to long term memory using proven methods.</h2>
               <Col className="step-list" md={10}>
 
                 <h2>On your final prompt, your ‘seed’ will fully blossom, committing it to memory using a proven <u>retention</u> technique.</h2>
-              <UserLogon />
               </Col>
+                <UserLogon />
             </Row>
           </Col>
 

@@ -13,10 +13,10 @@ import PlantASeedButton from '../PlantASeedButton'
 const userLogon = (
 	<form>
 		<FormGroup bsSize="large">
-			<FormControl className="soil" name="soil" type="text" placeholder="User Name" />
+			<FormControl className="userName" name="name" type="text" placeholder="User Name" />
 		</FormGroup>
 		<FormGroup bsSize="large">
-			<FormControl className="seed" name="seed" type="password" placeholder="Password" />
+			<FormControl className="userPass" name="password" type="password" placeholder="Password" />
 		</FormGroup>
 	</form>
 );
@@ -38,11 +38,12 @@ class UserLogon extends React.Component {
 		return (
 			<div className="modal-container" style={{ height: 100 }}>
 				<Button
+					className="get-started"
 					bsStyle="warning"
 					bsSize="large"
 					onClick={() => this.setState({ show: true })}
 				>
-					GET STARTED!
+					I'm ready to get started!
 				</Button>
 
 				<Modal
@@ -53,19 +54,26 @@ class UserLogon extends React.Component {
 				>
 					<Modal.Header closeButton>
 						<Modal.Title id="contained-modal-title">
-							<h1>Sign Up or Sign In to start planting!</h1>
+							<h1>Are you ready to start planting!</h1>
 						</Modal.Title>
 					</Modal.Header>
 					<Modal.Body>
-						<h3>Create an account by entering a user name and password. That's it!
+						<h3>Simply create an account by entering a user name and password. That's it!
 							...or Sign in using your existing account info.
 							Have fun!</h3>
 						{userLogon}
 					</Modal.Body>
 					<Modal.Footer >
 						{/* <Button class="plant-btn" onClick={this.handleHide}>Start Planting!</Button> */}
-						<PlantASeedButton class="plant-btn" onClick={this.handleHide}>Start Planting!</PlantASeedButton>
+						
+						<Button 
+						className="signin-btn" 
+						bsStyle="warning"
+						bsSize="large"
+						onClick={this.handleHide }>Let's GO!</Button>
+						
 					</Modal.Footer>
+					<PlantASeedButton />
 				</Modal>
 			</div>
 		);

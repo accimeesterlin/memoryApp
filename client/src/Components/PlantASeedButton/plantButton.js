@@ -13,7 +13,7 @@ const formInstance = (
 		<FormGroup bsSize="large">
 			<FormControl className="soil" type="text" placeholder="ex: Where you met, what purpose, which language, etc..." />
 		</FormGroup>
-        <FormGroup bsSize="large">
+        <FormGroup bsSize="large" >
 			<FormControl className="seed" type="text" placeholder="ex: Name, number, etc. Make it short and understandable, you will be tested on this." />
 		</FormGroup>
 	</form>
@@ -62,7 +62,11 @@ class PlantButton extends React.Component {
                     {formInstance}
 					</Modal.Body>
 					<Modal.Footer >
-						<Button class="plant-btn" onClick={this.handleHide}>Plant it!</Button>
+						<Button
+						class="plant-btn"
+						bsStyle="warning"
+						bsSize="large"
+						onClick={this.handleHide}>Plant it!</Button>
 					</Modal.Footer>
 				</Modal>
 			</div>

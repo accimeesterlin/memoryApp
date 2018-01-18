@@ -8,7 +8,7 @@ import './footer.css';
 const Footer = () => (
     <footer className="footer navbar-fixed-bottom">
         {/* <div className="container-fluid info-text"> */}
-            <div className="row company">
+            <div className="row company info-text">
                 <p>©2018 PlantTheSeed LLC</p>
             </div>
         {/* </div> */}
