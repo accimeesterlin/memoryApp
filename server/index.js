@@ -11,7 +11,7 @@ export default path => {
   app.use(logger("dev"));
   app.use(bodyParser.json());
 
-  app.use(express.static(`${path}/client/public`));
+  app.use(express.static(`${path}/client/`));
   app.use("/api/organization", routers.organization);
 
   // Any non API GET routes will be directed to our React App and handled by React Router
