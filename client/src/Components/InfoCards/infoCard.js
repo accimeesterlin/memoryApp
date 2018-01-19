@@ -36,6 +36,7 @@ const infoCard = (
 		<Col md={4} sm={12}>
 		<div className="plant-image">plant image here
 			{ Flower }
+			<img src="./images/flower.png"/>
 		</div>
 		
 		</Col>
