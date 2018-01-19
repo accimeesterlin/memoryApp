@@ -17,6 +17,7 @@ import { Glyphicon } from 'react-bootstrap';
 import RedDress from './images/NewRedDressCrop.png'
 import LightBulb from './images/LightBulbCrop.png'
 import Flower from './images/flower.png'
+import CardModal from '../../Components/CardModals'
 
 //image for main logo
 const imageResponsiveInstance = <Image src={MainLogo} responsive />;
@@ -139,6 +140,7 @@ to long term memory using proven methods.</h2>
               <UserLogon />
               </Col>
             </Row>
+        <CardModal />
           </Col>
 
           <Col className="lightbulb" xs={12} md={5}>

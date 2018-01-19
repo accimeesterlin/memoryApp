@@ -10,6 +10,7 @@ import './Navbar.css';
 import LeafLogo from './images/leaf2.png'
 import UserLogon from '../UserLogon'
 
+const signUpButton = UserLogon;
 const MyNavbar = (props) => (
 
 	<Navbar className="header">
