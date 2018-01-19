@@ -7,7 +7,7 @@ import db from './server/models';
 
 const app = App(__dirname);
 
-const server = require('https').Server(app);
+const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
 //use sync({force:true}) to drop all tables before trying to create
