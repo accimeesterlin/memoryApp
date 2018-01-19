@@ -1,9 +1,10 @@
-.btn-sign-up {
+.btn-sign-up,.get-started {
     color: rgb(255, 255, 255);
     /* border: 2px solid rgb(255, 255, 255); */
     border-radius: 25px;
-    background-color: rgb(42, 233, 42);
+    background-color: #f2a83c;
     vertical-align: center;
+    font-family: helvetica;
     
 }
 .btn-sign-in {
@@ -22,4 +23,9 @@
     height: 80px;
     z-index : 1;
     border: none;
+}
+
+.logon-btn {
+    padding-top: 40px;
+   
 }
