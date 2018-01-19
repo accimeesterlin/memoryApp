@@ -54,11 +54,11 @@ class UserLogon extends React.Component {
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="contained-modal-title">
-                            <h1>Are you ready to start planting!</h1>
+                            <h1 id="userModTitle" >Are you ready to start planting!</h1>
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <h3>Simply create an account by entering a user name and password. That's it!
+                        <h3 id="userModBody">Simply create an account by entering a user name and password. That's it!
                             ...or Sign in using your existing account info.
                             Have fun!</h3>
                         {userLogon}
@@ -73,7 +73,7 @@ class UserLogon extends React.Component {
                         onClick={this.handleHide }>Let's GO!</Button>
                         
                     </Modal.Footer>
-                    <PlantASeedButton />
+                    {/* <PlantASeedButton /> */}
                 </Modal>
             </div>
         );
