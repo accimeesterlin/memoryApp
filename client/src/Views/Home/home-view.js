@@ -58,8 +58,7 @@ export default props =>
           <Col xs={12} md={6}>
             {RedDressResponsive}
           </Col>
-          <Col className="questions" xs={12} md={6}>
-            
+          <Col className="questions" xs={12} md={6}> 
             <ul className="list">
               <li><h2>Are you often unable to remember
 an important fact or figure?</h2></li>
@@ -103,22 +102,18 @@ to long term memory using proven methods.</h2>
         <Col xs={1} md={1}>
         </Col>
       </Row>
-
       <Grid >
         <Row className="step-col">
           <Col className="flower" xs={12} md={2}>
             {FlowerResponsive}
           </Col>
-
           <Col className="steps" xs={12} md={5}>
             <Row className="row-1">
               <Col className="lg-nums" md={2}>
                 1.
               </Col>
               <Col className="step-list" md={10}>
-
                 <h2>Input what you want to learn as the ‘seed’, and a reminder item that helps you learn it, as the ‘soil’.</h2>
-
               </Col>
             </Row>
             <Row className="row-2">
@@ -126,7 +121,6 @@ to long term memory using proven methods.</h2>
                 2.
               </Col>
               <Col className="step-list" md={10}>
-
                 <h2>Periodic prompts will pop up to help you grow your ‘seed’. This will plant it into your memory with <u>repitition</u>.</h2>
               </Col>
             </Row>
@@ -135,34 +129,18 @@ to long term memory using proven methods.</h2>
                 3.
               </Col>
               <Col className="step-list" md={10}>
-
                 <h2>On your final prompt, your ‘seed’ will fully blossom, committing it to memory using a proven <u>retention</u> technique.</h2>
               <UserLogon />
               </Col>
             </Row>
         <CardModal />
           </Col>
-
           <Col className="lightbulb" xs={12} md={5}>
             {LightBulbResponsive}
             {/* lightbulb guy image */}
           </Col>
         </Row>
-
-        {/* <Row className="ground">
-              </Row> */}
       </Grid>
-      {/* <Row className="ground">
-                <Col xs={12} md={2}>
-                  {<UserLogon />}
-                </Col>
-                <Col xs={12} md={8}>
-                  {<PlantButton />}
-                </Col>
-                <Col xs={12} md={2}>
-                  <UserLogon />
-                </Col>
-              </Row> */}
       <Footer />
     </div>
   </div>

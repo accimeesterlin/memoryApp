@@ -16,10 +16,10 @@ const MyNavbar = (props) => (
 	<Navbar className="header">
 		<Navbar.Header  >
 			<Navbar.Brand  >
-				<div >
-					<img responsive img border="2" alt="leaflogo" src={LeafLogo} width="75" height="50">
+				<NavItem>
+					<img border="2" alt="leaflogo" src={LeafLogo} width="75" height="50">
 					</img>
-				</div>
+				</NavItem>
 			</Navbar.Brand>
 		</Navbar.Header>
 
