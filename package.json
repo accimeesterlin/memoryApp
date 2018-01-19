@@ -48,6 +48,7 @@
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "sass-loader": "^6.0.6",
+    "semantic-ui-react": "^0.77.2",
     "sequelize": "^4.28.6",
     "socket.io": "^2.0.4",
     "socket.io-client": "^2.0.4",

@@ -1,11 +1,11 @@
-import { subscribeToTimer } from './socket';
+import { subscribeToNotifications } from './socket';
 import React, { Component } from 'react';
 import './socket.css';
 
 class Notifications extends Component {
   constructor(props) {
     super(props);
-    subscribeToTimer((err, timestamp) => {
+    subscribeToNotifications((err, ) => {
       this.setState({
         timestamp
       })
@@ -16,15 +16,24 @@ class Notifications extends Component {
       } else if (Notification.permission !== "denied") {
         Notification.requestPermission(function (permission) {
           if (permission === "granted") {
-            const notification = new Notification(timestamp);
+            // const notification = new Notification(timestamp);
+            const options = {
+                'body': 'body',
+                'icon': 'https://www.iconexperience.com/_img/o_collection_png/green_dark_grey/512x512/plain/leaf.png'
+            }
+            const nn = new Notification(timestamp, options);
+            nn.onclick = function(x) {
+                window.focus()
+                nn.close()
+            }
           }
         })
       }
-    });
-  };
+    })
+  }
   state = {
     timestamp: 'no timestamp yet'
-  };
+  }
 
   render() {
     return (
@@ -33,6 +42,7 @@ class Notifications extends Component {
           This is the timer value: {this.state.timestamp}
         </p>
       </div>
+
     );
   }
 };

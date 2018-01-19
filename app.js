@@ -8,7 +8,7 @@ import db from './server/models';
 const app = App(__dirname);
 
 const server = require('http').Server(app);
-const io = require('socket.io')(server);
+const io = require('./socketio')(server)
 
 //use sync({force:true}) to drop all tables before trying to create
 db.sequelize.sync().then(function() {
@@ -17,11 +17,3 @@ db.sequelize.sync().then(function() {
   });
 });
 
-io.on('connection', (client) => {
-  client.on('subscribeToTimer', (interval) => {
-    console.log('client is subscribing to timer with interval ', interval);
-    setInterval(() => {
-      client.emit('timer', new Date());
-    }, interval);
-  });
-});
