@@ -20,7 +20,7 @@ import Flower from './images/flower.png'
 import CardModal from '../../Components/CardModals'
 
 //image for main logo
-const imageResponsiveInstance = <Image src={MainLogo} responsive />;
+const imageResponsiveInstance = <Image src={MainLogo} className="responsive" />;
 const RedDressResponsive = <Image src={RedDress} responsive />;
 const LightBulbResponsive = <Image src={LightBulb} responsive />;
 const FlowerResponsive = <Image src={Flower} responsive />;
@@ -33,7 +33,7 @@ export default props =>
   <div>
     <Navbar isLoggedIn={isLoggedIn} />
     <div className='home section1'>
-      <Grid >
+      {/* <Grid > */}
         <Row className="logo-row">
           <Col xs={1} md={1}>
           </Col>
@@ -47,7 +47,7 @@ export default props =>
           <h4>LEARN MORE</h4>
           <Glyphicon className="glyph" glyph="glyphicon glyphicon-menu-down" />
         </Row>
-      </Grid>
+      {/* </Grid> */}
     </div>
 
     {/* section 2 */}
