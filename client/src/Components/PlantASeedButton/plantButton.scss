@@ -1,25 +1,25 @@
 .modal-container .modal .modal-container .modal-backdrop {
-    position: absolute;
+  position: absolute;
+}
+.modal-container{
+  //   float: right;
+  text-align: center;
+    height: 50px;
+    padding-top: 2px;
+}
+.modal { 
+    text-align: left; 
+  h1 {
+    color: orange;
   }
-  .modal-container{
-    //   float: right;
-    text-align: center;
-      height: 50px;
-      padding-top: 2px;
+  h3 { 
+         color: rgb(85, 60, 17)
   }
-  .modal { 
-      text-align: left; 
-    h1 {
-      color: orange;
-    }
-    h3 { 
-           color: rgb(85, 60, 17)
-    }
-  }
+}
 
-  form {
-      .soil,.seed{
-          color: rgb(67, 49, 18);
-        }
-        
-    }
+form {
+    .soil,.seed{
+        color: rgb(67, 49, 18);
+      }
+      
+  }

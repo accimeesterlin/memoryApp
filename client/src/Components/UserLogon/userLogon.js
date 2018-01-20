@@ -8,66 +8,76 @@ import FormGroup from 'react-bootstrap/lib/FormGroup';
 import Form from 'react-bootstrap/lib/Form';
 import PlantASeedButton from '../PlantASeedButton'
 
+
+
 const userLogon = (
-	<form>
-		<FormGroup bsSize="large">
-			<FormControl className="soil" name="soil" type="text" placeholder="User Name" />
-		</FormGroup>
-		<FormGroup bsSize="large">
-			<FormControl className="seed" name="seed" type="password" placeholder="Password" />
-		</FormGroup>
-	</form>
+    <form>
+        <FormGroup bsSize="large">
+            <FormControl className="userName" name="name" type="text" placeholder="User Name" />
+        </FormGroup>
+        <FormGroup bsSize="large">
+            <FormControl className="userPass" name="password" type="password" placeholder="Password" />
+        </FormGroup>
+    </form>
 );
 
 
 class UserLogon extends React.Component {
-	constructor(...args) {
-		super(...args);
+    constructor(...args) {
+        super(...args);
 
-		this.handleHide = this.handleHide.bind(this);
+        this.handleHide = this.handleHide.bind(this);
 
-		this.state = { show: false };
-	}
+        this.state = { show: false };
+    }
 
-	handleHide() {
-		this.setState({ show: false });
-	}
-	render() {
-		return (
-			<div className="modal-container" style={{ height: 100 }}>
-				<Button
-					bsStyle="warning"
-					bsSize="large"
-					onClick={() => this.setState({ show: true })}
-				>
-					GET STARTED!
-				</Button>
+    handleHide() {
+        this.setState({ show: false });
+    }
+    render() {
+        return (
+            <div className="modal-container" style={{ height: 100 }}>
+                <Button
+                    className="get-started"
+                    bsStyle="warning"
+                    bsSize="large"
+                    onClick={() => this.setState({ show: true })}
+                >
+                    Let's Get Started!
+                </Button>
 
-				<Modal
-					show={this.state.show}
-					onHide={this.handleHide}
-					container={this}
-					aria-labelledby="contained-modal-title"
-				>
-					<Modal.Header closeButton>
-						<Modal.Title id="contained-modal-title">
-							<h1>Sign Up or Sign In to start planting!</h1>
-						</Modal.Title>
-					</Modal.Header>
-					<Modal.Body>
-						<h3>Create an account by entering a user name and password. That's it!
-							...or Sign in using your existing account info.
-							Have fun!</h3>
-						{userLogon}
-					</Modal.Body>
-					<Modal.Footer >
-						{/* <Button class="plant-btn" onClick={this.handleHide}>Start Planting!</Button> */}
-						<PlantASeedButton class="plant-btn" onClick={this.handleHide}>Start Planting!</PlantASeedButton>
-					</Modal.Footer>
-				</Modal>
-			</div>
-		);
-	}
+                <Modal
+                    show={this.state.show}
+                    onHide={this.handleHide}
+                    container={this}
+                    aria-labelledby="contained-modal-title"
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="contained-modal-title">
+                            <h1>Are you ready to start planting!</h1>
+                        </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <h3>Simply create an account by entering a user name and password. That's it!
+                            ...or Sign in using your existing account info.
+                            Have fun!</h3>
+                        {userLogon}
+                    </Modal.Body>
+                    <Modal.Footer >
+                        {/* <Button class="plant-btn" onClick={this.handleHide}>Start Planting!</Button> */}
+                        
+                        <Button 
+                        className="signin-btn" 
+                        bsStyle="warning"
+                        bsSize="large"
+                        onClick={this.handleHide }>Let's GO!</Button>
+                        
+                    </Modal.Footer>
+                    <PlantASeedButton />
+                </Modal>
+            </div>
+        );
+    }
 }
 
 
