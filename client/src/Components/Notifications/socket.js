@@ -1,6 +1,6 @@
 import openSocket from 'socket.io-client';
 
-const  socket = openSocket('http://localhost:3001');
+const  socket = openSocket(window.location.origin);
 
 function subscribeToNotifications(cb) {
   socket.on('cardNotification', card => cb(null, card));
