@@ -50,7 +50,7 @@ class CardModal extends React.Component {
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="contained-modal-title">
-                            <h2>Remember this?</h2>
+                            Remember this?
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>

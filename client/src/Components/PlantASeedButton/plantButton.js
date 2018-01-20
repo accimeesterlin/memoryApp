@@ -11,10 +11,10 @@ import Form from 'react-bootstrap/lib/Form';
 const formInstance = (
     <form>
         <FormGroup bsSize="large">
-            <FormControl className="soil" type="text" placeholder="ex: Where you met, what purpose, which language, etc..." />
+            <FormControl className="seed" type="text" placeholder="Seed: Name, number, etc. Make it short and understandable, you will be tested." />
         </FormGroup>
         <FormGroup bsSize="large" >
-            <FormControl className="seed" type="text" placeholder="ex: Name, number, etc. Make it short and understandable, you will be tested on this." />
+            <FormControl className="soil" type="text" placeholder="Soil: Where you met, what purpose, which language, etc..." />
         </FormGroup>
     </form>
 );

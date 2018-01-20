@@ -20,13 +20,13 @@ import Flower from './images/flower.png'
 import CardModal from '../../Components/CardModals'
 
 //image for main logo
-const imageResponsiveInstance = <Image src={MainLogo} className="responsive" />;
+const imageResponsiveInstance = <Image src={MainLogo} responsive />;
 const RedDressResponsive = <Image src={RedDress} responsive />;
 const LightBulbResponsive = <Image src={LightBulb} responsive />;
 const FlowerResponsive = <Image src={Flower} responsive />;
 
 //for button state change
-const isLoggedIn = false;
+const isLoggedIn = true;
 
 
 export default props =>
@@ -121,7 +121,7 @@ to long term memory using proven methods.</h2>
                 2.
               </Col>
               <Col className="step-list" md={10}>
-                <h2>Periodic prompts will pop up to help you grow your ‘seed’. This will plant it into your memory with <u>repitition</u>.</h2>
+                <h2>Periodic prompts will pop up to help you grow your ‘seed’. This will plant it into your memory with <u>repetition</u>.</h2>
               </Col>
             </Row>
             <Row className="row-3">
@@ -129,7 +129,7 @@ to long term memory using proven methods.</h2>
                 3.
               </Col>
               <Col className="step-list" md={10}>
-                <h2>On your final prompt, your ‘seed’ will fully blossom, committing it to memory using a proven <u>retention</u> technique.</h2>
+                <h2>On your final prompt, your ‘seed’ will fully blossom, rooting it to memory using a proven <u>retention</u> technique.</h2>
               <UserLogon />
               </Col>
             </Row>
