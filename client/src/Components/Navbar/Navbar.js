@@ -10,6 +10,7 @@ import './Navbar.css';
 import LeafLogo from './images/leaf2.png'
 import UserLogon from '../UserLogon'
 
+const signUpButton = UserLogon;
 const MyNavbar = (props) => (
 
 	<Navbar className="header">
@@ -23,14 +24,14 @@ const MyNavbar = (props) => (
 		</Navbar.Header>
 
 		{!props.isLoggedIn ? (
-			<Nav pullRight>
-				<NavItem eventKey={1} href="#">
-					<button className="btn btn-large btn-sign-up ">SIGN UP</button>
-				</NavItem>
-				<NavItem eventKey={2} href="#">
-					<button className="btn btn-large btn-sign-in">SIGN IN</button>
-				</NavItem>
-			</Nav>
+            <Nav pullRight >
+                
+                <NavItem eventKey={1} href="#">             
+                        <UserLogon />               
+                </NavItem>
+            
+            </Nav>
+
 
 		) : (
 				<Nav pullRight>
