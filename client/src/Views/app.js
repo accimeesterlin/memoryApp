@@ -5,7 +5,14 @@ import Organization from './Organization'
 import MainButtons from '../Components/Button'
 import MyNavbar from '../Components/Navbar'
 import Notifications from '../Components/Notifications'
+import Dummy from './../Dummy'
 
+
+
+// HOME
+// this.props
+
+// userLogon
 import './app.scss'
 export default props => (
   <div>
@@ -14,7 +21,8 @@ export default props => (
       <div className="navbar">
 
         <Route exact path="/" component={Home} />
-        <Route path="/organization" component={Organization} />
+        <Route exact path="/organization" component={Organization} />
+        <Route exact path="/dashboard" component={Dummy} />
       </div>
     </BrowserRouter>
   </div>

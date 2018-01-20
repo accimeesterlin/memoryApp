@@ -1,5 +1,6 @@
 import { subscribeToTimer } from './socket';
 import React, { Component } from 'react';
+import InfoCards from "./../InfoCards/infoCard";
 import './socket.css';
 
 class Notifications extends Component {
@@ -31,11 +32,14 @@ class Notifications extends Component {
       <div className="App">
         <p className="App-intro white">
           This is the timer value: {this.state.timestamp}
+          <InfoCards time = {this.state.timestamp}/>
         </p>
       </div>
     );
   }
 };
+
+// props
 
 export default Notifications;
 

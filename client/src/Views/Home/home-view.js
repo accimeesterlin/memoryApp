@@ -29,130 +29,132 @@ const FlowerResponsive = <Image src={Flower} responsive />;
 const isLoggedIn = false;
 
 
-export default props =>
-  <div>
-    <Navbar isLoggedIn={isLoggedIn} />
-    <div className='home section1'>
-      <Grid >
-        <Row className="logo-row">
-          <Col xs={1} md={1}>
-          </Col>
-          <Col className="logo" xs={10} md={10}>
-            {imageResponsiveInstance}
-          </Col>
-          <Col xs={1} md={1}>
-          </Col>
-        </Row>
-        <Row>
-          <h4>LEARN MORE</h4>
-          <Glyphicon className="glyph" glyph="glyphicon glyphicon-menu-down" />
-        </Row>
-      </Grid>
-    </div>
+export default props => {
+  console.log("Props Home: ", props);
+  return (
+    <div>
+      <Navbar isLoggedIn={isLoggedIn} />
+      <div className='home section1'>
+        <Grid >
+          <Row className="logo-row">
+            <Col xs={1} md={1}>
+            </Col>
+            <Col className="logo" xs={10} md={10}>
+              {imageResponsiveInstance}
+            </Col>
+            <Col xs={1} md={1}>
+            </Col>
+          </Row>
+          <Row>
+            <h4>LEARN MORE</h4>
+            <Glyphicon className="glyph" glyph="glyphicon glyphicon-menu-down" />
+          </Row>
+        </Grid>
+      </div>
 
-    {/* section 2 */}
+      {/* section 2 */}
 
-    <div className='home section2'>
-      <Grid >
-        <Row className="logo-row">
-          <Col xs={12} md={6}>
-            {RedDressResponsive}
-          </Col>
-          <Col className="questions" xs={12} md={6}>
-            
-            <ul className="list">
-              <li><h2>Are you often unable to remember
+      <div className='home section2'>
+        <Grid >
+          <Row className="logo-row">
+            <Col xs={12} md={6}>
+              {RedDressResponsive}
+            </Col>
+            <Col className="questions" xs={12} md={6}>
+
+              <ul className="list">
+                <li><h2>Are you often unable to remember
 an important fact or figure?</h2></li>
-              <li><h2>Do you forget people’s names at
+                <li><h2>Do you forget people’s names at
 the worst moments?</h2></li>
-              <li><h2>Are you ever asked a question,
+                <li><h2>Are you ever asked a question,
 and you should know the answer,
 but you struggle to form an
 intelligent reply?</h2></li>
 
-            </ul>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={2}>
-          </Col>
-          <Col md={8}>
-          <h2 className="commit" >Now you can easily commit these ‘seeds’
+              </ul>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={2}>
+            </Col>
+            <Col md={8}>
+              <h2 className="commit" >Now you can easily commit these ‘seeds’
 to long term memory using proven methods.</h2>
+            </Col>
+            <Col md={2}>
+            </Col>
+          </Row>
+          <Row>
+            <h4>LEARN MORE</h4>
+            <Glyphicon className="glyph" glyph="glyphicon glyphicon-menu-down" />
+          </Row>
+        </Grid>
+      </div>
+
+      {/* section 3 */}
+
+      <div className='home section3'>
+
+        <Row >
+          <Col xs={1} md={1}>
           </Col>
-          <Col md={2}>
+          <Col className="sec3-tagline" xs={10} md={10}>
+            <h3 className="easy-text" >It’s as easy as …</h3>
           </Col>
-        </Row>
-        <Row>
-          <h4>LEARN MORE</h4>
-          <Glyphicon className="glyph" glyph="glyphicon glyphicon-menu-down" />
-        </Row>
-      </Grid>
-    </div>
-
-    {/* section 3 */}
-
-    <div className='home section3'>
-
-      <Row >
-        <Col xs={1} md={1}>
-        </Col>
-        <Col className="sec3-tagline" xs={10} md={10}>
-          <h3 className="easy-text" >It’s as easy as …</h3>
-        </Col>
-        <Col xs={1} md={1}>
-        </Col>
-      </Row>
-
-      <Grid >
-        <Row className="step-col">
-          <Col className="flower" xs={12} md={2}>
-            {FlowerResponsive}
-          </Col>
-
-          <Col className="steps" xs={12} md={5}>
-            <Row className="row-1">
-              <Col className="lg-nums" md={2}>
-                1.
-              </Col>
-              <Col className="step-list" md={10}>
-
-                <h2>Input what you want to learn as the ‘seed’, and a reminder item that helps you learn it, as the ‘soil’.</h2>
-
-              </Col>
-            </Row>
-            <Row className="row-2">
-              <Col className="lg-nums" md={2}>
-                2.
-              </Col>
-              <Col className="step-list" md={10}>
-
-                <h2>Periodic prompts will pop up to help you grow your ‘seed’. This will plant it into your memory with <u>repitition</u>.</h2>
-              </Col>
-            </Row>
-            <Row className="row-3">
-              <Col className="lg-nums" md={2}>
-                3.
-              </Col>
-              <Col className="step-list" md={10}>
-
-                <h2>On your final prompt, your ‘seed’ will fully blossom, committing it to memory using a proven <u>retention</u> technique.</h2>
-              <UserLogon />
-              </Col>
-            </Row>
-        <CardModal />
-          </Col>
-
-          <Col className="lightbulb" xs={12} md={5}>
-            {LightBulbResponsive}
-            {/* lightbulb guy image */}
+          <Col xs={1} md={1}>
           </Col>
         </Row>
 
-        {/* <Row className="ground">
+        <Grid >
+          <Row className="step-col">
+            <Col className="flower" xs={12} md={2}>
+              {FlowerResponsive}
+            </Col>
+
+            <Col className="steps" xs={12} md={5}>
+              <Row className="row-1">
+                <Col className="lg-nums" md={2}>
+                  1.
+              </Col>
+                <Col className="step-list" md={10}>
+
+                  <h2>Input what you want to learn as the ‘seed’, and a reminder item that helps you learn it, as the ‘soil’.</h2>
+
+                </Col>
+              </Row>
+              <Row className="row-2">
+                <Col className="lg-nums" md={2}>
+                  2.
+              </Col>
+                <Col className="step-list" md={10}>
+
+                  <h2>Periodic prompts will pop up to help you grow your ‘seed’. This will plant it into your memory with <u>repitition</u>.</h2>
+                </Col>
+              </Row>
+              <Row className="row-3">
+                <Col className="lg-nums" md={2}>
+                  3.
+              </Col>
+                <Col className="step-list" md={10}>
+
+                  <h2>On your final prompt, your ‘seed’ will fully blossom, committing it to memory using a proven <u>retention</u> technique.</h2>
+                  <UserLogon history = {props.history.push}/>
+                </Col>
+              </Row>
+              <CardModal />
+            </Col>
+
+            <Col className="lightbulb" xs={12} md={5}>
+              {LightBulbResponsive}
+              {/* lightbulb guy image */}
+            </Col>
+          </Row>
+
+          {/* <Row className="ground">
               </Row> */}
-      </Grid>
-      {/* <Row className="ground">
+        </Grid>
+        {/* <Row className="ground">
                 <Col xs={12} md={2}>
                   {<UserLogon />}
                 </Col>
@@ -163,8 +165,9 @@ to long term memory using proven methods.</h2>
                   <UserLogon />
                 </Col>
               </Row> */}
-      <Footer />
+        <Footer />
+      </div>
     </div>
-  </div>
 
-
+  )
+}

@@ -33,8 +33,10 @@ class UserLogon extends React.Component {
 
     handleHide() {
         this.setState({ show: false });
+        this.props.history("/dashboard");
     }
     render() {
+        console.log("Props User ON: ", this.props)
         return (
             <div className="modal-container" style={{ height: 100 }}>
                 <Button
@@ -73,7 +75,7 @@ class UserLogon extends React.Component {
                         onClick={this.handleHide }>Let's GO!</Button>
                         
                     </Modal.Footer>
-                    <PlantASeedButton />
+                    {/* <PlantASeedButton /> */}
                 </Modal>
             </div>
         );
@@ -82,3 +84,10 @@ class UserLogon extends React.Component {
 
 
 export default UserLogon;
+
+
+
+// Props
+
+
+// Pass data from one to another components

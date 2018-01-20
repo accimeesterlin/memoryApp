@@ -11,7 +11,9 @@ import { ControlLabel } from 'react-bootstrap';
 import Flower from './images/flower.png'
 
 
-const infoCard = (
+const infoCard = (props) =>  (
+	
+
 	<Form horizontal>
 	<Col md={8} sm={12}>
 		<FormGroup controlId="formHorizontalEmail">
@@ -28,7 +30,7 @@ const infoCard = (
 				Your Seed : 
 			</Col>
 			<Col sm={8}>
-				<h4 id="remind"><i>Danny.</i></h4>
+				<h4 id="remind"><i> {  props.time } </i></h4>
 			</Col>
 		</FormGroup>
 		
@@ -49,4 +51,26 @@ const infoCard = (
 	</Form>
 );
 
-export default (infoCard);
+export default infoCard;
+
+// from one component to another,
+// props
+
+
+// 3types of components
+
+// #1 Functional
+	// const Header = (props) => {
+	// 	// props.name
+	// 	// props.age
+	// }
+
+	// <Header name = '' age = {5}/>
+
+// #2 Class components
+	// class App extends React.Component{
+	// 	// this.props.name
+	// 	// this.props.age
+	// }
+	// <App  name = "" age = {5}/>
+// #3 Higher order components (advanced)
