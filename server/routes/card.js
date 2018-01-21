@@ -6,6 +6,7 @@ const router = express.Router();
 // Route to get list of crypto currencies for drop down.
 router.get("/", card.findAll);
 router.get("/:id", card.findByCardId);
+router.get("/:userID/:iteration/:since", card.findCardsForUser);
 router.get("/:userID", card.findAllForUser);
 router.post("/", card.create);
 router.put("/:id", card.update);
