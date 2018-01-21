@@ -30,7 +30,7 @@ class PlantButton extends React.Component {
     }
 
     handleHide() {
-        this.setState({ show: true });
+        this.setState({ show: false });
         
     }
 
