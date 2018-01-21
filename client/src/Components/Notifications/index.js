@@ -5,23 +5,23 @@ import './socket.css';
 class Notifications extends Component {
   constructor(props) {
     super(props);
-    subscribeToNotifications((err, ) => {
+    subscribeToNotifications((err, card) => {
       this.setState({
-        timestamp
+        card
       })
       // Let's check whether notification permissions have already been granted
       if (Notification.permission === "granted") {
-        const notification = new Notification(timestamp);
+        const notification = new Notification(card);
         // Otherwise, we need to ask the user for permission
       } else if (Notification.permission !== "denied") {
         Notification.requestPermission(function (permission) {
           if (permission === "granted") {
-            // const notification = new Notification(timestamp);
+            // const notification = new Notification(card);
             const options = {
                 'body': 'body',
                 'icon': 'https://www.iconexperience.com/_img/o_collection_png/green_dark_grey/512x512/plain/leaf.png'
             }
-            const nn = new Notification(timestamp, options);
+            const nn = new Notification(card, options);
             nn.onclick = function(x) {
                 window.focus()
                 nn.close()
@@ -32,14 +32,15 @@ class Notifications extends Component {
     })
   }
   state = {
-    timestamp: 'no timestamp yet'
+    card: 'no card yet'
   }
 
   render() {
+    const card = this.state.card;
     return (
       <div className="App">
         <p className="App-intro white">
-          This is the timer value: {this.state.timestamp}
+          [{card.shownCount}/3] This is the card: {card.soil}? {card.seed}!
         </p>
       </div>
 
