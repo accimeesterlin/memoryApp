@@ -26,13 +26,31 @@ class PlantButton extends React.Component {
 
         this.handleHide = this.handleHide.bind(this);
 
-        this.state = { show: true };
+        this.state = { show: false };
     }
 
     handleHide() {
-        this.setState({ show: false });
+        this.setState({ show: true });
     }
+
+
+
+    componentWillReceiveProps(props){
+        // CAN SET HERE
+        console.log("Props Button: ", props);
+        if(props.show === true){
+            this.handleHide();
+           
+        } else{
+            // TODO
+            // undefined
+        }
+    }
+
+
     render() {
+
+        console.log("State Modal: ", this.state)
         return (
             <div className="modal-container" style={{ height: 100 }}>
                 <Button

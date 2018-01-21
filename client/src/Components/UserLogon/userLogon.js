@@ -32,11 +32,16 @@ class UserLogon extends React.Component {
     }
 
     handleHide() {
-        this.setState({ show: false });
-        this.props.history("/dashboard");
+        this.setState({ show: false, show_button: true });
+        // this.props.history("/dashboard");
     }
+
+
+
     render() {
-        console.log("Props User ON: ", this.props)
+
+
+        // CAN SET STATE INSIDE THE RENDER
         return (
             <div className="modal-container" style={{ height: 100 }}>
                 <Button
@@ -67,16 +72,20 @@ class UserLogon extends React.Component {
                     </Modal.Body>
                     <Modal.Footer >
                         {/* <Button class="plant-btn" onClick={this.handleHide}>Start Planting!</Button> */}
-                        
-                        <Button 
-                        className="signin-btn" 
-                        bsStyle="warning"
-                        bsSize="large"
-                        onClick={this.handleHide }>Let's GO!</Button>
-                        
+
+                        <Button
+                            className="signin-btn"
+                            bsStyle="warning"
+                            bsSize="large"
+                            onClick={this.handleHide}>Let's GO!</Button>
+
                     </Modal.Footer>
-                    {/* <PlantASeedButton /> */}
+
                 </Modal>
+
+                <div className={this.state.show_button ? "" : "dispear"}>
+                    <PlantASeedButton show={this.state.show_button} />
+                </div>
             </div>
         );
     }
