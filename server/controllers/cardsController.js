@@ -29,7 +29,19 @@ const controller = {
       })
       .catch(err => res.status(422).json(err));
   }, 
-  findAllForUser: (req, res) => {
+  findCardsForUser: (req, res) => {
+    db.Card.findAll({
+      where: {
+        UserId: userID,
+        shownCount: iterator,
+        lastShown: { $gte: since },
+        active: true
+      }
+      })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findByUser: (req, res) => {
     db.Card.findAll({
       where: {
         userID: userID,
