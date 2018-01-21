@@ -3,21 +3,21 @@ const db = require("../models");
 // Defining methods for the booksController
 const controller = {
   findAll: (req, res) => {
-    db.Organization.findAll({
-      where: {
-        inactive: false
-      }
-    })
+    db.Card.findAll({
+        where: {
+          active: true
+        }
+      })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findById: function (req, res) {
-    db.Organization.findOne({
-      where: {
-        id: req.params.id,
-        inactive: false
-      }
-    })
+  findByCardId: function(req, res) {
+    db.Card.findOne({
+        where: {
+          id: req.params.id,
+          active: true
+        }
+      })
       .then(dbModel => {
         if (dbModel) {
           res.json(dbModel);
@@ -28,32 +28,42 @@ const controller = {
         }
       })
       .catch(err => res.status(422).json(err));
-  },
-  create: function (req, res) {
-    db.Organization.create({
-      name: req.body.name,
-      description: req.body.description
-    })
+  }, 
+  findAllForUser: (req, res) => {
+    db.Card.findAll({
+      where: {
+        userID: userID,
+        active: true
+      }
+      })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  update: function (req, res) {
-    db.Organization.update({
-      name: req.body.name,
-      description: req.body.description
-    }, {
+  create: function(req, res) {
+    db.Card.create({
+        seed: req.body.seed,
+        soil: req.body.soil
+      })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  update: function(req, res) {
+    db.Card.update({
+        seed: req.body.seed,
+        soil: req.body.soil
+      }, {
         where: {
           id: req.params.id,
-          inactive: false
+          active: true
         }
       })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  remove: function (req, res) {
-    db.Organization.update({
-      inactive: true
-    }, {
+  remove: function(req, res) {
+    db.Card.update({
+        active: false
+      }, {
         where: {
           id: req.params.id
         }
