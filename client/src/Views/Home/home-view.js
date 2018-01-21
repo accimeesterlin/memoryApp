@@ -34,19 +34,19 @@ export default props =>
     <Navbar isLoggedIn={isLoggedIn} />
     <div className='home section1'>
       {/* <Grid > */}
-        <Row className="logo-row">
-          <Col xs={1} md={1}>
-          </Col>
-          <Col className="logo" xs={10} md={10}>
-            {imageResponsiveInstance}
-          </Col>
-          <Col xs={1} md={1}>
-          </Col>
-        </Row>
-        <Row>
-          <h4>LEARN MORE</h4>
-          <Glyphicon className="glyph" glyph="glyphicon glyphicon-menu-down" />
-        </Row>
+      <Row className="logo-row">
+        <Col xs={1} md={0}>
+        </Col>
+        <Col className="logo" xs={10} md={12}>
+          {<img responsive src={MainLogo} alt="logo" />}
+        </Col>
+        <Col xs={1} md={0}>
+        </Col>
+      </Row>
+      <Row>
+        <h4>LEARN MORE</h4>
+        <Glyphicon className="glyph" glyph="glyphicon glyphicon-menu-down" />
+      </Row>
       {/* </Grid> */}
     </div>
 
@@ -58,17 +58,12 @@ export default props =>
           <Col xs={12} md={6}>
             {RedDressResponsive}
           </Col>
-          <Col className="questions" xs={12} md={6}> 
+          <Col className="questions" xs={12} md={6}>
             <ul className="list">
-              <li><h2>Are you often unable to remember
-an important fact or figure?</h2></li>
-              <li><h2>Do you forget people’s names at
-the worst moments?</h2></li>
-              <li><h2>Are you ever asked a question,
-and you should know the answer,
-but you struggle to form an
-intelligent reply?</h2></li>
-
+              <li><h2>Are you often unable to remember important facts or figures?</h2></li>
+              <li><h2>Do you forget people's names at the worst moments?</h2></li>
+              <li><h2>Are you ever asked a question, and you should know the answer, but you struggle to form an intelligent reply?</h2></li>
+              <li><h2>Have you ever forgotten a special occasion, birthday, or anniversary?</h2></li>
             </ul>
           </Col>
         </Row>
@@ -76,14 +71,14 @@ intelligent reply?</h2></li>
           <Col md={2}>
           </Col>
           <Col md={8}>
-          <h2 className="commit" >Now you can easily commit these ‘seeds’
+            <h2 className="commit" >Now you can easily commit these ‘seeds’
 to long term memory using proven methods.</h2>
           </Col>
           <Col md={2}>
           </Col>
         </Row>
         <Row>
-          <h4>LEARN MORE</h4>
+          <h4>TEACH ME HOW!</h4>
           <Glyphicon className="glyph" glyph="glyphicon glyphicon-menu-down" />
         </Row>
       </Grid>
@@ -130,10 +125,11 @@ to long term memory using proven methods.</h2>
               </Col>
               <Col className="step-list" md={10}>
                 <h2>On your final prompt, your ‘seed’ will fully blossom, rooting it to memory using a proven <u>retention</u> technique.</h2>
-              <UserLogon />
+                <UserLogon />
+               {/* took out history = {props.history.push} in the above component */}
               </Col>
             </Row>
-        <CardModal />
+            <CardModal />
           </Col>
           <Col className="lightbulb" xs={12} md={5}>
             {LightBulbResponsive}

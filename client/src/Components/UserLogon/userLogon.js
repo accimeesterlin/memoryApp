@@ -32,9 +32,10 @@ class UserLogon extends React.Component {
     }
 
     handleHide() {
-        this.setState({ show: false });
+        this.setState({ show: false, show_btn: true });
     }
-    
+
+
     render() {
         return (
             <div className="modal-container" style={{ height: 100 }}>
@@ -65,16 +66,18 @@ class UserLogon extends React.Component {
                         {userLogon}
                     </Modal.Body>
                     <Modal.Footer >
-                        
-                        <Button 
-                        bsStyle="warning"
-                        bsSize="large"
-                        onClick={this.handleHide}
+
+                        <Button
+                            bsStyle="warning"
+                            bsSize="large"
+                            onClick={this.handleHide}
                         >Let's GO!</Button>
-                        
+
                     </Modal.Footer>
-                    {/* <PlantASeedButton /> */}
                 </Modal>
+                <div className= {this.state.show_btn === true ? "" : "hide"}>
+                    <PlantASeedButton show={this.state.show_btn} />
+                </div>
             </div>
         );
     }
