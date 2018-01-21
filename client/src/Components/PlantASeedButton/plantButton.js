@@ -50,6 +50,8 @@ class PlantButton extends React.Component {
 
     render() {
 
+        // NO SET STATE
+
         console.log("State Modal: ", this.state)
         return (
             <div className="modal-container" style={{ height: 100 }}>
