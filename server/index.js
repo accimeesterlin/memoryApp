@@ -12,7 +12,6 @@ export default path => {
   app.use(bodyParser.json());
 
   app.use(express.static(`${path}/client/`));
-  app.use("/api/organization", routers.organization);
 
   // Any non API GET routes will be directed to our React App and handled by React Router
   app.get("*", (req, res) => {
@@ -22,3 +21,23 @@ export default path => {
   return app;
   // -------------------------------------------------
 };
+
+import db from "./models";
+
+db.User.create({
+  userName: 'name',
+  password: 'pass',
+  active: true,
+})
+  .then(User => {
+
+    db.Card.create({
+      seed: 'seed',
+      soil: 'soil',
+      active: true,
+      shownCount: 0,
+      lastShown: new Date(),
+      UserId: User.id,
+    })
+
+  })

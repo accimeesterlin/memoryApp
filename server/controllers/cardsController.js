@@ -70,6 +70,20 @@ const controller = {
       })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+
+  nextCardsForUser: function (userID, iteration, since, cb) {
+    db.Card.findAll({
+      where: {
+        userID: userID,
+        active: true,
+        shownCount: iteration,
+        lastShown: { $lte: since },
+      }
+    })
+      .then(dbModel => cb(dbModel))
+      .catch(err => { });
+
   }
 };
 

@@ -1,9 +1,11 @@
 import openSocket from 'socket.io-client';
 
-const  socket = openSocket('https://planttheseed.herokuapp.com');
+const  socket = openSocket(window.location.origin);
 
-function subscribeToTimer(cb) {
-  socket.on('timer', timestamp => cb(null, timestamp));
-  socket.emit('subscribeToTimer', 1000);
+let userID = 1;
+
+function subscribeToNotifications(cb) {
+  socket.on('cardNotification', card => cb(null, card));
+  socket.emit('subscribeToNotifications', userID);
 }
-export { subscribeToTimer };
+export { subscribeToNotifications };
