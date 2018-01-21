@@ -32,7 +32,7 @@ class UserLogon extends React.Component {
     }
 
     handleHide() {
-        this.setState({ show: false, show_btn: true });
+        this.setState({ show: false, show_button: true });
     }
 
 
@@ -75,8 +75,8 @@ class UserLogon extends React.Component {
 
                     </Modal.Footer>
                 </Modal>
-                <div className= {this.state.show_btn === true ? "" : "hide"}>
-                    <PlantASeedButton show={this.state.show_btn} />
+                <div className= {this.state.show_button ? "" : "hide"}>
+                    <PlantASeedButton show={this.state.show_button} />
                 </div>
             </div>
         );

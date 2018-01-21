@@ -11,7 +11,7 @@ import Form from 'react-bootstrap/lib/Form';
 const formInstance = (
     <form>
         <FormGroup bsSize="large">
-            <FormControl className="seed" type="text" placeholder="Seed: Name, number, etc. Make it short and understandable, you will be tested." />
+            <FormControl className="seed" type="text" placeholder="Seed: Name, number, etc. Make it short and understandable." />
         </FormGroup>
         <FormGroup bsSize="large" >
             <FormControl className="soil" type="text" placeholder="Soil: Where you met, what purpose, which language, etc..." />
@@ -30,13 +30,16 @@ class PlantButton extends React.Component {
     }
 
     handleHide() {
-        this.setState({ show: false });
+        this.setState({ show: true });
         
+    }
+    closeModal(){
+        this.setState({ show: false });
     }
 
     componentWillReceiveProps(props){
         if (props.show === true){
-            this.setState({show: false});
+            this.handleHide();
         } else {
             //TODO
             //Undefined
@@ -49,7 +52,7 @@ class PlantButton extends React.Component {
                 <Button
                     bsStyle="warning"
                     bsSize="large"
-                    onClick={() => this.setState({ show: false })}
+                    onClick={() => this.setState({ show: true })}
                 >
                     PLANT A SEED!
                 </Button>
@@ -66,10 +69,10 @@ class PlantButton extends React.Component {
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <h3>Simply enter a bit of reference info
-                        (the Soil) and the thing you want to
-                        remember (the Seed)…
-                        Then watch it grow.</h3>
+                        <h3>Enter your "Seed", the thing you want
+                            to remember. Then enter your "Soil", a bit of reference info
+                            to help you remember your seed. Plant it,                       
+                        then watch it grow.</h3>
                     {formInstance}
                     </Modal.Body>
                     <Modal.Footer >
