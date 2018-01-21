@@ -26,7 +26,7 @@ const LightBulbResponsive = <Image src={LightBulb} responsive />;
 const FlowerResponsive = <Image src={Flower} responsive />;
 
 //for button state change
-const isLoggedIn = true;
+const isLoggedIn = false;
 
 
 export default props =>
